@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow-Componente</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!--Menu Principal-->
+        <header id="home" class="header">
+            <!--Barra de navegação-->
+            <nav class="navbar">
+                <!--Logo-->
+                <a class="logo" href="/">LOGOMARCA TEXTUAL</a>
+                <!--Fim da Logo-->
+                <!--icon sanguiche de responsividade (oculto)-->
+                <div class="mobile-menu-icon">
+                    <div class="linha1"></div>
+                    <div class="linha2"></div>
+                    <div class="linha3"></div>
+                </div>
+                <!--Fim do icon sanguiche de responsividade (oculto)-->
+                <!--Links de Navegação-->
+                <ul class="nav-list">
+                    <!--itens da lista de navegação-->
+                    <li class="nav-item"><a href="">item1</a></li>
+                    <li class="nav-item"><a href="">item2</a></li>
+                    <li class="nav-item"><a href="">item3</a></li>
+                    <li class="nav-item"><a href="">item4</a></li>
+                    <li class="nav-item"><a href="">item5</a></li>
+                    <!--Fim dos itens da lista de navegação-->
+                </ul>
+                <!--Fim dos Links de Navegação-->
+            </nav>
+            <!--Fim da Barra de Navegação-->
+        </header>
+        <!--Fim do Menu Principal-->
+    <div class="slider">
+        <div class="myslider fade" style="display: block;">
+            <div class="text">
+                <h1>IMAGEM 1</h1>
+                <p>WEB DEVELOP <br> Se inscreva em meu canal para receber mais videos</p>
+            </div>
+            <img src="img/img1.jpg" alt="">
+        </div>
+        <div class="myslider fade">
+            <div class="text">
+                <h1>IMAGEM 2</h1>
+                <p>WEB DEVELOP <br> Se inscreva em meu canal para receber mais videos</p>
+            </div>
+            <img src="img/img2.jpg" alt="">
+        </div>
+        <div class="myslider fade">
+            <div class="text">
+                <h1>IMAGEM 3</h1>
+                <p>WEB DEVELOP <br> Se inscreva em meu canal para receber mais videos</p>
+            </div>
+            <img src="img/img3.jpg" alt="">
+        </div>
+        <div class="myslider fade">
+            <div class="text">
+                <h1>IMAGEM 4</h1>
+                <p>WEB DEVELOP <br> Se inscreva em meu canal para receber mais videos</p>
+            </div>
+            <img src="img/img4.jpg" alt="">
+        </div>
+        <div class="myslider fade">
+            <div class="text">
+                <h1>IMAGEM 5</h1>
+                <p>WEB DEVELOP <br> Se inscreva em meu canal para receber mais videos</p>
+            </div>
+            <img src="img/img5.jpg" alt="">
+        </div>
+
+        <a class="prev" onclick="plusSlide(-1)">&#10094</a>
+        <a class="next" onclick="plusSlide(1)">&#10095</a>
+
+        <div class="dotsbox" style="text-align:center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+    </div>
+    <script src="js/slider-show.js"></script>
+</body>
+</html>
