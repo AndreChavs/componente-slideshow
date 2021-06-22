@@ -1,0 +1,32 @@
+/*Mixins, Variáveis e config*/
+html{
+    font-size: 58.82%;
+}
+/*Cores*/
+    // $color-primary
+    // $color-secundary
+    // $white
+    // $black
+    
+
+/*Tipografias*/
+@mixin type-1 ($tamanho) {
+    font-family: monospace;
+    @if $tamanho == 14 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    @else if $tamanho == 16 {
+        font-size: 1.6rem;
+        line-height: 2.3rem
+    }
+    @else if $tamanho == 18 {
+        font-size: 1.8ren
+    }
+}
+/*Fim de Mixins e Variáveis*/
+
+
+/*Imports*/
+@import 'header';
+@import 'principal';
