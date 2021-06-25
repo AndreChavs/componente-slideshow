@@ -828,12 +828,12 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     top: 7rem;
-    height: 37vh;
+    height: 65vh;
     background-color: #002463;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-transform: translateY(-150%);
-            transform: translateY(-150%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
   }
