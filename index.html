@@ -4,97 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Project - v2.0</title>
+    <title>Advogado Trabalhista - Dr. Rafael Chaves</title>
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Newsreader&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- style -->
     <link rel="stylesheet" href="css/scss/main.css">
+    <!-- icons - fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-<body>
-    <!-- HEADER-->
-        <header id="home" class="header">
-            <!--Barra de navegação-->
-            <nav class="navbar">
-                <!--Logo-->
-                <a class="logo" href="#">LOGOMARCA</a>
-                <!--Fim da Logo-->
-                <!--icon sanguiche de responsividade (oculto)-->
-                <div class="mobile-menu-icon">
+<body>    
+    <header class="header" id="home">
+        <!--topo  -->
+        <div class="topo">
+            <div class="container">
+                <div class="grid-3 tel">
+                    <a href=""><span><img src="img/icon-phone.svg" alt="telefone"></span>+55 (93) 99150-2622</a>
+                </div>
+                <div class="grid-5 endereco">
+                    <span><img src="img/icon-map.svg" alt="Lugar"></span>
+                    <address>Rua Ipiranga, 109, Santana - Santarém</address>
+                </div>
+                <div class="grid-4 hora">
+                    <img src="img/clock-solid.svg" alt="horário">
+                    <span>de Seg a Sex - Das 09:00 às 18:00</span>
+                </div>
+            </div>
+        </div>
+        <!-- navegação -->
+        <nav class="navbar">
+            <div class="container">
+                
+                <div class="grid-5 logo">
+                    <a href="#home">Dr. Rafael Chaves</a>
+                </div>
+                <div class="mobile-menu">
                     <div class="linha-1"></div>
                     <div class="linha-2"></div>
                     <div class="linha-3"></div>
                 </div>
-                <!--Fim do icon sanguiche de responsividade (oculto)-->
-                <!--Links de Navegação-->
-                <ul class="nav-list">
-                    <!--itens da lista de navegação-->
-                    <li class="nav-item"><a href="#">item1</a></li>
-                    <li class="nav-item"><a href="#">item2</a></li>
-                    <li class="nav-item"><a href="#">item3</a></li>
-                    <li class="nav-item"><a href="#">item4</a></li>
-                    <li class="nav-item"><a href="#">item5</a></li>
-                    <!--Fim dos itens da lista de navegação-->
+                <ul class="grid-6 menu">
+                    <li class="nav-item"><a href="#home" id="select">HOME</a></li>
+                    <li class="nav-item"><a href="#sobre">SOBRE</a></li>
+                    <li class="nav-item"><a href="#area">ÁREA</a></li>
+                    <li class="nav-item"><a href="#servicos">SERVIÇOS</a></li>
+                    <li class="nav-item"><a href="#contato">CONTATO</a></li>
                 </ul>
-                <!--Fim dos Links de Navegação-->
-            </nav>
-            <!--Fim da Barra de Navegação-->            
-        </header>
-        <!--Fim do HEADER-->
-        <!--SESSÃO PRINCIPAL-->
-        <section class="slider">
+                              
+            </div>
+        </nav>
+        <!-- principal - Slidershow -->
+        <div class="slider">
             <div class="myslider fade" style="display: block;">
                 <div class="text">
-                    <h1>Titulo</h1>
-                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ex laboriosam ratione veniam quam provident labore distinctio commodi tenetur cum tempora.</p>
+                    <h1>Título</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <img src="img/img1.jpg" alt="Primeira Imagem">
+                <a href="#" class="btn">Clique Aqui</a>
+                <img src="img/img-1.jpg" alt="Direito-Trabalhista 1">
             </div>
             <div class="myslider fade">
                 <div class="text">
-                    <h1>Titulo</h1>
-                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ex laboriosam ratione veniam quam provident labore distinctio commodi tenetur cum tempora.</p>
+                    <h1>Título</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <img src="img/img2.jpg" alt="Segunda Imagem">
+                <a href="#" class="btn">Clique Aqui</a>
+                <img src="img/img-2.jpg" alt="Trabalhista-Rafael Chaves">
             </div>
             <div class="myslider fade">
                 <div class="text">
-                    <h1>Titulo</h1>
-                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ex laboriosam ratione veniam quam provident labore distinctio commodi tenetur cum tempora.</p>
+                    <h1>Título</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <img src="img/img3.jpg" alt="Terceira Imagem">
+                <a href="#" class="btn">Clique Aqui</a>
+                <img src="img/img-3.jpg" alt="Rafael Chaves - Advogado Trabalhista">
             </div>
-            <div class="myslider fade">
-                <div class="text">
-                    <h1>Titulo</h1>
-                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ex laboriosam ratione veniam quam provident labore distinctio commodi tenetur cum tempora.</p>
-                </div>
-                <img src="img/img4.jpg" alt="Quarta Imagem">
-            </div>
-            <div class="myslider fade">
-                <div class="text">
-                    <h1>Titulo</h1>
-                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Ex laboriosam ratione veniam quam provident labore distinctio commodi tenetur cum tempora.</p>
-                </div>
-                <img src="img/img5.jpg" alt="Quinta Imagem">
-            </div>
-                <!--Botões do SlideShow-->
-            <a class="prev" onclick="plusSlide(-1)">&#10094</a>
-            <a class="next" onclick="plusSlide(1)">&#10095</a>
-                <!--FIM dos Botões do SlideShow-->
-
+            <a id="seta" class="prev" onclick="plusSlide(-1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44.316" height="39.445" viewBox="0 0 44.316 39.445"><defs></defs><path class="a" d="M1012.467,318.343c-41.53,18.006,0,37.623,0,37.623l-37.695-17.844L971,336.337Z" transform="translate(-968.579 -317.426)"/></svg>
+            </a>
+            <a id="seta" class="next" onclick="plusSlide(1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44.316" height="39.445" viewBox="0 0 44.316 39.445"><defs><style>.a{fill:none;stroke:#fffefe;stroke-width:2px;}</style></defs><path class="a" d="M971,318.343c41.53,18.006,0,37.623,0,37.623l37.695-17.844,3.772-1.786Z" transform="translate(-970.572 -317.426)"/></svg>
+            </a>
             <div class="dotsbox" style="text-align:center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot active" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>                
+            </div>            
+        </div>
+    </header>
+    
+        <div class="container c">
+            <div class="grid-5 g">test 1</div>
+            <div class="grid-7 g">test 2</div>
+            <div class="grid-4 g"> teste 5 </div>
+            <div class="grid-3 g"> Teste 6</div>
+            <div class="grid-9 g">
+                <div class="row r">
+                    <div class="grid-4 g">Teste 7</div>
+                    <div class="grid-4 g">Teste 8</div>
+                    <div class="grid-4 g">Teste 9</div>
+                </div>
             </div>
-        </section>
-        
+            <div class="grid-3 g">Teste 10</div>
+            <div class="grid-3 g">Teste 12</div>
+        </div>
+    
+        <div class="container c">
+            <div class="grid-7 g">
+                <div class="row r">                
+                    <div class="grid-6 offset-6 g o">Teste</div>
+                </div>
+            </div>
+            <div class="grid-5 g">teste 14</div>
+            <div class="grid-6 offset-1 g o">teste 15</div>
+            <div class="grid-5 g">teste 16</div>
+        </div> 
+    
 
 
-        <!--FIM DA SESSÃO PRINCIPAL-->
 
-        <script src="js/menu-scroll.js"></script>
-        <script src="js/menu-responsive.js"></script>
-        <script src="js/slider-show.js"></script>
+<!-- JavaScript -->
+<script src="js/slider-show.js"></script>
+<script src="js/menu-scroll.js"></script>
+<script src="js/menu-responsive.js"></script>
 </body>
 </html>
+
+

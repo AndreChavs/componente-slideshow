@@ -36,8 +36,8 @@ class MobileNavbar{
 }
 
 var mobileNavbar = new MobileNavbar(
-    ".mobile-menu-icon",
-    ".nav-list",
+    ".mobile-menu",
+    ".menu",
     ".nav-item"
 )
 

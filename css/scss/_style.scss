@@ -1,32 +1,74 @@
-/*Mixins, Variáveis e config*/
+// Tipografia e Cores
+$gray-light:#D9E0E6;
+$white:#FFF;
+$blue-dark:#002463;
+
+
+
+@mixin type-1($size) {
+    font-family:'Newsreader', serif;
+    @if $size == 14 {
+        font-size: 1.4rem;
+        line-height: 1.96rem;
+    }
+    @else if $size == 18 {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    @else if $size == 24 {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+    @else if $size == 36 {
+        font-size: 3.6rem;                
+    }
+}
+@mixin type-2($size) {
+    font-family:'Nunito', sans-serif;
+    @if $size == 12 {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    @else if $size == 14 {
+        font-size: 1.4rem;
+        line-height: 1.96rem;
+    }
+    @else if $size == 16 {
+        font-size: 1.6rem;
+        line-height: 2.26rem;
+    }
+    @else if $size == 24 {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+    @else if $size == 36 {
+        font-size: 3.6rem;
+                
+    }
+}
+
+@mixin botao {
+    @include type-2(16);
+    color: $gray-light;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: .3rem solid $gray-light;
+    border-radius: 5rem;
+    transition: all .5s ease-in;
+    &:hover{
+        color: #000;
+        background: $white;
+        box-shadow: .0rem .1rem .5rem $white;  
+        transition: all .5s ease-out;      
+    }
+}
+
+// Configurações Gerais
 html{
     font-size: 58.82%;
 }
-/*Cores*/
-    // $color-primary
-    // $color-secundary
-    // $white
-    // $black
-    
 
-/*Tipografias*/
-@mixin type-1 ($tamanho) {
-    font-family: monospace;
-    @if $tamanho == 14 {
-        font-size: 1.4rem;
-        line-height: 2rem;
-    }
-    @else if $tamanho == 16 {
-        font-size: 1.6rem;
-        line-height: 2.3rem
-    }
-    @else if $tamanho == 18 {
-        font-size: 1.8ren
-    }
-}
-/*Fim de Mixins e Variáveis*/
-
-
-/*Imports*/
 @import 'header';
-@import 'principal';
+@import 'slider';
+@import 'scroll';
+

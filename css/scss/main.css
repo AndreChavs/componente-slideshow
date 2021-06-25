@@ -446,7 +446,6 @@ body {
   /*min-height: 1px;*/
   margin: 0 10px;
   /*@include device($)*/
-  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -608,163 +607,261 @@ body {
   /*@include clearfix()*/
 }
 
-.row [class^="grid-"] {
-  margin-bottom: 0px;
-}
-
-/*Mixins, Variáveis e config*/
 html {
   font-size: 58.82%;
 }
 
-/*Cores*/
-/*Tipografias*/
-/*Fim de Mixins e Variáveis*/
-/*Imports*/
-/*configurações Gerais*/
-a {
-  color: #faf5f5;
+body {
+  /*@include device($)*/
 }
 
-/*Fim das configurações Gerais*/
-/*Configurações específicas*/
-/*-------------------HEADER--------------------*/
-.navbar {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  /*separa os flex-items do container*/
-  padding-top: 30px;
-  padding-bottom: 30px;
-  position: fixed;
-  /*barra no meu Fixa na tela*/
-  z-index: 10;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  /*tempo de transição*/
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/*aplicação do stylo depois do Scroll da página*/
-.scrolling-active .navbar {
-  /*elemento criado ao rolar o scroll do documento.*/
-  background-color: #111;
-  /*o Fundo muda quando o posicionamento do scroll for > 0*/
-  padding-top: 10px;
-  /*altura do menu principal*/
-  padding-bottom: 10px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-/* ----Effect Scolling para telas responsivas----*/
-@media (max-width: 768px) {
-  .scrolling-active .nav-list {
-    top: 55px;
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
-    height: 300px;
-  }
-  .scrolling-active .linha-1, .scrolling-active .linha-2, .scrolling-active .linha-3 {
-    background: #fff;
-  }
-}
-
-.scrolling-active .nav-item a {
-  color: #fff;
-}
-
-.scrolling-active .logo {
-  color: #fff;
-}
-
-/*Apply styles after scroll end*/
-.mobile-menu-icon {
-  display: none;
-  /*modo de exibição : "invisível"*/
-  cursor: pointer;
-  /*cursor: mãozinha*/
-}
-
-.linha-1, .linha-2, .linha-3 {
-  width: 32px;
-  /*largura*/
-  height: 2px;
-  /*altura*/
-  background-color: #111;
-  /*cor de fundo*/
-  margin: 8px;
-  /*distanciamento externo*/
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  /*Efeito de tempo da animação*/
-}
-
-.logo {
-  display: block;
-  /*Mantem a logo justa*/
-  padding: 5px;
-}
-
-.nav-item {
-  padding: 5px 10px;
-  margin-left: 10px;
-}
-
-/*MENU-RESPONSIVO*/
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body {
     overflow-x: hidden;
   }
-  .navbar {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .nav-list {
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+
+.topo {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: transparent;
+  padding: .5rem 0;
+  opacity: 1;
+  -webkit-transition: all .9s ease-in;
+  transition: all .9s ease-in;
+  /*@include device($)*/
+  border-bottom: 2px solid #D9E0E6;
+}
+
+@media screen and (max-width: 767px) {
+  .topo {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 100px;
-    right: 0;
-    width: 30vw;
-    height: 260px;
-    background-color: #111;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    -webkit-clip-path: rect(0, 0, 0, 0);
+            clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    opacity: 0;
+  }
+}
+
+.tel {
+  padding: .5rem 0;
+}
+
+.tel a {
+  color: #D9E0E6;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.tel a span {
+  margin-right: 1rem;
+}
+
+.tel a:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+
+.endereco {
+  padding: .5rem 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.endereco address {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-style: normal;
+  color: #D9E0E6;
+  margin-left: 1rem;
+  display: inline;
+}
+
+.endereco address:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+
+.hora {
+  padding: .5rem 0;
+  cursor: pointer;
+  text-align: end;
+}
+
+.hora span {
+  margin-left: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #D9E0E6;
+}
+
+.hora span:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  z-index: 10;
+  top: 5.5rem;
+  -webkit-transition: all .7s ease-in;
+  transition: all .7s ease-in;
+  /*@include device($)*/
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    top: 0%;
+  }
+}
+
+.navbar .container {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.logo {
+  /*@include device($)*/
+}
+
+.logo a {
+  font-family: 'Charm', cursive;
+  font-size: 3rem;
+  color: #D9E0E6;
+}
+
+.logo a:hover {
+  color: #FFF;
+  text-shadow: 1px 1px 2px white;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 1rem 0;
+  }
+}
+
+.mobile-menu {
+  visibility: hidden;
+  cursor: pointer;
+  padding: 1rem;
+  /*@include device($)*/
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    visibility: visible;
+  }
+}
+
+.mobile-menu.active {
+  background: transparent;
+}
+
+.mobile-menu .linha-1, .mobile-menu .linha-2, .mobile-menu .linha-3 {
+  width: 2.4rem;
+  height: .17rem;
+  background-color: #D9E0E6;
+  margin: 0.6rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.mobile-menu.active .linha-1 {
+  -webkit-transform: rotate(45deg) translate(6px, 6px);
+          transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu.active .linha-2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .linha-3 {
+  -webkit-transform: rotate(-45deg) translate(5px, -5px);
+          transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu:hover {
+  border-color: #FFF;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /*@include device($)*/
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
+    top: 7rem;
+    height: 37vh;
+    background-color: #002463;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  .mobile-menu-icon {
-    display: block;
-  }
-  .nav-item a {
-    color: #fff;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
   }
 }
 
-/*ANIMAÇÃO*/
-.nav-list.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.menu li a {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.96rem;
+  padding: 1rem 2rem;
+  color: #D9E0E6;
+}
+
+.menu li a:hover {
+  color: #fff;
+}
+
+.menu.active {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  /*@include device($)*/
+}
+
+@media screen and (max-width: 767px) {
+  .menu.active {
+    background: #002463;
+  }
 }
 
 @-webkit-keyframes navLinkFade {
@@ -793,35 +890,51 @@ a {
   }
 }
 
-.mobile-menu-icon.active .linha-1 {
-  -webkit-transform: rotate(-45deg) translate(-8px, 8px);
-          transform: rotate(-45deg) translate(-8px, 8px);
+.c, .g, .r, .o {
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.mobile-menu-icon.active .linha-2 {
-  opacity: 0;
-}
-
-.mobile-menu-icon.active .linha-3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -7px);
-          transform: rotate(45deg) translate(-5px, -7px);
-}
-
-/*FIM DA ANIMAÇÃO*/
-/*MENU-RESPONSIVO*/
-/*-------------------FIM DO HEADER--------------------*/
-/*SESSÃO PRINCIPAL*/
-/*SlideSHOW*/
 .slider {
   position: relative;
   width: 100%;
-  background: transparent;
 }
 
 .myslider {
-  height: 100vh;
   display: none;
   overflow: hidden;
+  position: relative;
+}
+
+#seta {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  /*@include device($)*/
+}
+
+@media screen and (max-width: 767px) {
+  #seta svg {
+    padding: .7rem;
+  }
+}
+
+#seta path {
+  fill: transparent;
+  stroke: #D9E0E6;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+#seta path:hover {
+  stroke: #FFF;
+  fill: #FFF;
 }
 
 .prev, .next {
@@ -829,21 +942,14 @@ a {
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  font-size: 50px;
-  padding: 15px;
+  padding: 1.5rem;
   cursor: pointer;
-  color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-
-.prev:hover, .next:hover, .dot:hover {
-  color: #3498db;
-  border-color: #3498db;
 }
 
 .next {
@@ -861,21 +967,23 @@ a {
 
 .dot {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 3px solid #fff;
-  border-radius: 50%;
+  width: 3.5rem;
+  height: 1rem;
+  border: 3px solid #D9E0E6;
   margin: 0 10px;
   cursor: pointer;
 }
 
-/*JAVASCRIPT*/
-.active, .dot:hover {
-  border-color: #3498db;
+.dot:hover {
+  background-color: #FFF;
+  border-color: #FFF;
 }
 
-/*FIM JAVASCRIPT*/
-/*ANIMAÇÃO*/
+.ativo, .dot:hover {
+  border-color: #FFF;
+  background-color: #FFF;
+}
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -885,7 +993,7 @@ a {
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -894,59 +1002,175 @@ a {
 
 @keyframes fade {
   from {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
   }
 }
 
-/*FIM DE ANIMAÇÃO*/
 .text {
-  width: 50%;
   position: absolute;
-  color: #fff;
-  letter-spacing: 2px;
-  line-height: 2.5rem;
-  left: 15%;
+  color: #FFF;
   top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-animation-name: posi;
   -webkit-animation-duration: 2s;
   animation-name: posi;
   animation-duration: 2s;
   z-index: 1;
+  text-align: center;
+  /*@include device($)*/
+  /*@include device($)*/
+  /*@include device($)*/
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  .text {
+    top: 35%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .text {
+    top: 45%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text {
+    top: 40%;
+  }
 }
 
 @-webkit-keyframes posi {
   from {
-    left: 25%;
+    left: 45%;
   }
   to {
-    left: 15%;
+    left: 50%;
   }
 }
 
 @keyframes posi {
   from {
-    left: 25%;
+    left: 45%;
   }
   to {
-    left: 15%;
+    left: 50%;
   }
 }
 
 .text h1 {
-  color: #3498db;
-  font-weight: bold;
-  margin: 20px;
-  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #FFF;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: .3rem;
+  /*@include device($)*/
+  /*@include device($)*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .text h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+
+.text h1::after {
+  content: '';
+  display: block;
+  height: .3rem;
+  width: 15rem;
+  background: #FFF;
+  margin: 0 auto;
 }
 
 .text p {
-  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  font-family: 'Newsreader', serif;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  color: #D9E0E6;
+  /*@include device($)*/
+  /*@include device($)*/
 }
 
-img {
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .text p {
+    font-family: 'Newsreader', serif;
+    font-size: 1.4rem;
+    line-height: 1.96rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text p {
+    font-family: 'Newsreader', serif;
+    font-size: 1.4rem;
+    line-height: 1.96rem;
+  }
+}
+
+.btn {
+  position: absolute;
+  display: block;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.26rem;
+  color: #D9E0E6;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: 0.3rem solid #D9E0E6;
+  border-radius: 5rem;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  /*@include device($)*/
+  /*@include device($)*/
+}
+
+.btn:hover {
+  color: #000;
+  background: #FFF;
+  -webkit-box-shadow: 0rem 0.1rem 0.5rem #FFF;
+          box-shadow: 0rem 0.1rem 0.5rem #FFF;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .btn {
+    top: 75%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    top: 75%;
+  }
+}
+
+.myslider img {
   -webkit-transform: scale(1.5, 1.5);
           transform: scale(1.5, 1.5);
   animation-name: zoomin;
@@ -955,7 +1179,7 @@ img {
   -webkit-animation-duration: 40s;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 @keyframes zoomin {
@@ -980,54 +1204,22 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .text {
-    line-height: 2rem;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation-name: posi2;
-    -webkit-animation-duration: 2s;
-    animation-name: posi2;
-    animation-duration: 2s;
-  }
-  @-webkit-keyframes posi2 {
-    from {
-      top: 35%;
-    }
-    to {
-      top: 50%;
-    }
-  }
-  @keyframes posi2 {
-    from {
-      top: 35%;
-    }
-    to {
-      top: 50%;
-    }
-  }
-  .text h1 {
-    font-size: 2.2rem;
-  }
-  .text p {
-    font-size: 1.5rem;
-  }
+.scrolling-active .topo {
+  position: absolute;
+  overflow: hidden;
+  -webkit-clip-path: rect(0, 0, 0, 0);
+          clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  opacity: 0;
+  -webkit-transition: all .9s ease-out;
+  transition: all .9s ease-out;
 }
 
-@media screen and (max-width: 480px) {
-  .myslider {
-    height: 60vh;
-  }
-  .text h1 {
-    font-size: 2.5rem;
-  }
-  .text p {
-    font-size: 2rem;
-  }
+.scrolling-active .navbar {
+  top: 0%;
+  -webkit-transition: all .7s ease-out;
+  transition: all .7s ease-out;
+  background: #002463;
+  padding: 1rem 0;
 }
-
-/*FIM do SlideShow*/
-/*FIM DA SESSÃO PRINCIPAL*/
-/*Fim das Configurações específicas*/
